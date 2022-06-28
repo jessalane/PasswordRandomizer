@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--start body-->
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+
+    <!--start popup selector-->
+    <section id="selectorPopup">
+      <div> <h4>select criteria</h4>
+        <input type="text" id="length" name="length" placeholder="password length (between 8-128)"><br>
+
+        <input type="checkbox" id="lower" name="lower" value="Lowercase Letters">
+        <label for="lower"> select to include lowercase letters </label><br>
+
+        <input type="checkbox" id="upper" name="upper" value="Uppercase Letters">
+        <label for="upper"> select to include uppercase letters </label><br>
+
+        <input type="checkbox" id="special" name="special" value="Special Characters">
+        <label for="special"> select to include special characters </label><br>
+
+        <input type="checkbox" id="numbers" name="numbers" value="Numeric Characters">
+        <label for="numbers"> select to include numeric characters </label><br>
+
+        <input type="submit" value="Submit" id="start">
+      </div>
+    </section>
+    <!--end popul selector-->
+    <script src="script.js"></script>
+  </body>
+  <!--end body-->
+</html>
