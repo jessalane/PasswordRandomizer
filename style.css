@@ -133,7 +133,16 @@ button[disabled] {
   font-size: 20px;
   text-align: center;
   border-bottom: 1px solid #000;
-  margin-top: 0;
+  margin: 0;
+}
+
+#selectorPopup h6 {
+  line-height: 100%;
+  text-align: center;
+  margin: 5px 0;
+  padding: 0;
+  color: red;
+  visibility: hidden;
 }
 
 #selectorPopup div {
