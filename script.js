@@ -1,24 +1,25 @@
-// variables
-var lowerChar =  "abcdefghijklmnopqrstuvwxyz";
-var upperChar =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var specialChar = "(<[{?!.*&%#$@;:,/~^+=-_}]>)";
-var numeralChar = "0123456789";
-var passCharacters = "";
-var password = "";
-
 // brings up the criteria when you click the generate button
 var generate = document.getElementById('generate');
 generate.onclick = function() {
   document.getElementById('selectorPopup').style.visibility = 'visible';
+  document.getElementById("selectorPopup").empty();
 }
 
 // reads the criteria submitted by the user to include in password
 var generate2 = document.getElementById('start');
 generate2.onclick = function() {
+  // variables
+  var lowerChar =  "abcdefghijklmnopqrstuvwxyz";
+  var upperChar =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var specialChar = "(<[{?!.*&%#$@;:,/~^+=-_}]>)";
+  var numeralChar = "0123456789";
+  var passCharacters = "";
+  var password = "";
   var passLength = document.getElementById('length').value;
   var passwordText = document.querySelector("#password");
   var checkedLength = document.querySelectorAll('input[type="checkbox"]:checked').length;
 
+  // beginning of criteria input
   if (passLength >= 8 && passLength < 128) {
 
     document.getElementById('selectorPopup').style.visibility = 'hidden';
@@ -60,9 +61,11 @@ generate2.onclick = function() {
       passwordText.value = password;
     }
 
+    // hides the error message when the for submits
     document.getElementById('error').style.visibility = 'hidden';
 
   } else { 
+    // makes the error visible when the wrong number is input
     document.getElementById('error').style.visibility = 'visible';
   }
 }
